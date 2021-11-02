@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Aesthetic Calculator</title>
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="calculator.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap');
+
+    .front {
+      transition:
+        transform
+        600ms
+        cubic-bezier(.3, .7, .4, 1);
+    }
+  
+    .pushable:hover .front {
+      transform: translateY(-6px);
+      transition:
+        transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+    }
+  
+    .pushable:active .front {
+      transform: translateY(-2px);
+      transition: transform 34ms;
+    }
+  </style>  
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <div data-container class="container">
+    <div data-wrapper class="wrapper">
+      <div class="box output">
+        <div data-previous-operand class="box previous-operand">
+        </div>
+        <div data-current-operand class="box current-operand">
+        </div>
+      </div>
+      <button data-clear class="pushable wide1 clear" style="background: var(--darkred);">
+        <span class="wider wide1 front">
+          CLEAR 
+        </span>
+      </button>
+      <button data-delete class="pushable wide2 delete" style="background: var(--darkorange);">
+        <span class="wider wide2 front">
+          DELETE
+        </span>
+      </button>
+      <button data-number class="pushable number">
+        <span class="front">
+          7
+        </span>
+      </button>
+      <button data-number class="pushable number">
+        <span class="front">
+          8
+        </span>
+      </button>
+      <button data-number class="pushable number">
+        <span class="front">
+          9
+        </span>
+      </button>
+      <button data-operation class="pushable operation">
+        <span class="front">
+          ÷
+        </span>
+      </button>
+      <button data-number class="pushable number">
+        <span class="front">
+          4
+        </span>
+      </button>
+      <button data-number class="pushable number">
+        <span class="front">
+          5
+        </span>
+      </button>
+      <button data-number class="pushable number">
+        <span class="front">
+          6
+        </span>
+      </button>
+      <button data-operation class="pushable operation">
+        <span class="front">
+          *
+        </span>
+      </button>
+      <button data-number class="pushable number">
+        <span class="front">
+          1
+        </span>
+      </button>
+      <button data-number class="pushable number">
+        <span class="front">
+          2
+        </span>
+      </button>
+      <button data-number class="pushable number">
+        <span class="front">
+          3
+        </span>
+      </button>
+      <button data-operation class="pushable operation">
+        <span class="front">
+          +
+        </span>
+      </button>
+      <button data-number class="pushable number">
+        <span class="front">
+          .
+        </span>
+      </button>
+      <button data-number class="pushable number">
+        <span class="front">
+          0
+        </span>
+      </button>
+      <button data-equals class="pushable equal">
+        <span class="front">
+          =
+        </span>
+      </button>
+      <button data-operation class="pushable operation">
+        <span class="front">
+          -
+        </span>
+      </button>
+    </div>
+</div>
+<script src="calculator.js"></script>
+</body>
+
+</html>

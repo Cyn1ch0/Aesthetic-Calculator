@@ -1,0 +1,137 @@
+/*
+.box {
+    background-color: rgb(235, 75, 75);
+    border: 2px solid black;
+    
+}*/
+:root {
+  --darkgreen: rgb(38, 70, 83);
+  --bluegreen: rgb(44, 160, 146);
+  --red: rgb(231, 111, 81);
+  --darkred: rgb(204, 68, 50);
+  --orange: rgb(228, 154, 85);
+  --darkorange: rgb(204, 105, 59);
+  --yellow: rgb(233, 196, 106);
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(45deg, rgb(224, 175, 136), rgb(241, 167, 154),rgb(230, 139, 166));
+  background-size: 300% auto;
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
+}
+
+@keyframes gradient {
+  0% {background-position: 0%}
+  100% {background-position: 100%}
+}
+
+.wrapper {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  padding: 20px;
+  grid-gap: 13px;
+  border-radius: 12px;
+  background-color: var(--darkgreen);
+  text-align: center;
+  transform: translateY(-20px);
+}
+
+.wide1 {
+  grid-column: 1 / 3;
+  grid-row: 3;
+}
+
+.wide2 {
+    grid-column: 3 / 5;
+    grid-row: 3;
+  }
+
+.current-operand {
+    font-size: 40pt;
+}
+
+.previous-operand {
+  font-size: 13pt;
+}
+
+.output {
+    display: grid;
+    border-top:7px solid rgb(22, 49, 59);
+    border-left:7px solid rgb(22, 49, 59);
+    border-right:7px solid rgb(22, 49, 59);
+    padding: 20px;
+    padding-bottom: 15px;
+    font-family: 'JetBrains Mono', monospace;
+    text-align: right;
+    grid-template-rows: 33% minmax(66%, auto);
+    grid-column: 1 / 5;
+    grid-row: 1 / 3;
+    background-color: var(--bluegreen);
+    color: rgb(198, 250, 232);
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.pushable {
+  background: var(--orange);
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.front {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20pt;
+  display: block;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: var(--yellow);
+  color: black;
+  transform: translateY(-4px);
+}
+
+.container {
+  margin: 50px auto;
+  width: 30%;
+  background:rgb(22, 49, 59); 
+  border-radius: 12px;
+}
+
+.wide1 .pushable{
+  background: var(--darkred);
+}
+
+.wide1 .front{
+  background: var(--red);
+  padding: 20px 37px;
+}
+
+.wide2 .front{
+  background: var(--orange);
+}
+
+.wide2 .pushable {
+  background: var(--darkorange);
+}
+
+.wider{
+  padding: 20px 30px;
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
